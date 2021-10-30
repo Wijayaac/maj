@@ -1,0 +1,41 @@
+@import 'config';
+@import 'components';
+@import 'plugin';
+
+@font-face {
+    font-family: 'Work Sans';
+    src: url('/assets/fonts/WorkSans-Medium.woff');
+}
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('/assets/fonts/SourceSansPro-Regular.woff');
+}
+
+*{
+    font-family: 'Source Sans Pro';
+    font-size: 1rem;
+}
+html{
+    scroll-behavior: smooth;
+}
+h1,h2,h3{
+    font-family: 'Work Sans';
+}
+
+body{
+    min-height: 140vh;
+}
+.navbar{
+    &__icon{
+        img{
+            margin: 0 0.5rem;
+        }
+        @include media-breakpoint-up(md){
+            visibility: hidden;
+        }
+    }
+    .nav-link{
+        font-family: 'Work Sans';
+        font-size: 1rem;
+    }
+}
