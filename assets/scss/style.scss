@@ -13,7 +13,6 @@
 
 * {
   font-family: $fontSecondary;
-  font-size: 1rem;
 }
 html {
   scroll-behavior: smooth;
@@ -24,9 +23,6 @@ h3 {
   font-family: $fontPrimary;
 }
 
-body {
-  min-height: 140vh;
-}
 a {
   display: inline-block;
   text-decoration: none;
@@ -80,7 +76,7 @@ a {
       font-family: $fontPrimary;
     }
     p,
-    span {
+    a {
       display: none;
       @include media-breakpoint-up(md) {
         display: block;
@@ -89,5 +85,52 @@ a {
   }
   &__btn {
     letter-spacing: 3px;
+  }
+}
+
+.post {
+  padding-top: 4.0625rem;
+  &__category {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: $fontPrimary;
+    font-weight: $font-weight-bolder;
+
+    &::after {
+      content: "";
+      border-bottom: solid 5px #000;
+      display: block;
+      width: 95%;
+    }
+  }
+  &__title {
+    font-family: $fontPrimary;
+    font-size: 1.2rem;
+  }
+  &__meta {
+    font-size: 0.875rem;
+  }
+  &__link {
+    text-transform: uppercase;
+    font-family: $fontPrimary;
+    letter-spacing: 2px;
+    display: none;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+  &__icon {
+    margin: 0.5rem 0;
+    font-family: $fontPrimary;
+    text-transform: uppercase;
+    display: flex;
+    font-size: 1.25rem;
+    justify-content: space-around;
+  }
+  &__ads {
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    line-height: 400px;
   }
 }
